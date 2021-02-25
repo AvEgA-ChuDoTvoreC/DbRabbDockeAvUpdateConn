@@ -1,0 +1,24 @@
+version: '2.3'
+
+networks:
+  MYNETWORK:
+
+services:
+
+# DataBase service
+  database:
+
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: qwerty
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_DATABASE: DataBaseSQL
+
+    networks:
+     - MYNETWORK
+    ports:
+     - "3306:3306"
+    image: "mysql:5.7"
+

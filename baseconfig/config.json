@@ -1,0 +1,77 @@
+{
+    "params": {
+        "log_path": "/logs/",
+        "log_level": "info",
+        "port_icap": 13440,
+        "size_preview": 10240,
+        "modif_mode": "frame",
+        "undefined_date": 100,
+        "send_undef": 0,
+        "convert": 1,
+        "files_path": "/usr/src/script/files/",
+        "interval": 5000
+    },
+    "Flask": {
+        "host": "localhost",
+        "port": "5000"
+    },
+    "RabbitMQ": {
+        "login": "deliver",
+        "pass": "qwerttty",
+        "port": 5672,
+        "server": "172.19.2.8"
+    },
+    "DataBase": {
+        "user": "admin",
+        "password": "qwerty",
+        "database": "DataBaseSQL",
+        "host": "172.19.2.1",
+        "port": 5669,
+
+        "charset": "utf8mb4",
+        "use_unicode": true,
+        "autocommit": true
+    },
+    "DB_extra": {
+        "times_before_lost": 2,
+        "create_schema_file": "dbtemplates/schemas/create_schema.sql",
+        "insert_schema_file": "dbtemplates/schemas/insert_schema.sql",
+        "select_schema_file": "dbtemplates/schemas/select_schema.sql",
+        "table_template_file": "dbtemplates/templates/posts_template.sql",
+        "table_name": "posts",
+        "buffered": true,
+        "collation": "utf8mb4_unicode_ci",
+        "time_zone": "+03:00"
+    },
+    "Threads": {
+        "thread_limit": 2
+    },
+    "Requests": {
+        "POST_json": {
+            "type": "json",
+            "queue": "POST_json"
+        },
+        "POST_uuid": {
+            "type": "json",
+            "queue": "POST_uuid"
+        },
+        "GET_json": {
+            "type": "json",
+            "queue": "GET_json"
+        },
+        "GET_xml": {
+            "type": "xml",
+            "queue": "GET_xml"
+        },
+        "TOKEN": {
+            "type": "json",
+            "queue": "TOKEN",
+            "update_time": "03:00"
+        },
+        "SCAN": {
+            "type": "json",
+            "queue": "SCAN",
+            "update_time": "03:00"
+        }
+    }
+}

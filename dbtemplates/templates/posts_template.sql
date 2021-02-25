@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS {}(
+id INT NOT NULL AUTO_INCREMENT,
+text TEXT,
+created_date VARCHAR(100),
+rubrics  VARCHAR(100),
+PRIMARY KEY (id)
+);
